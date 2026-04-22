@@ -1,20 +1,19 @@
 using Soenneker.Composio.OpenApiClientUtil.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Composio.OpenApiClientUtil.Tests;
 
-[Collection("Collection")]
-public sealed class ComposioOpenApiClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class ComposioOpenApiClientUtilTests : HostedUnitTest
 {
     private readonly IComposioOpenApiClientUtil _openapiclientutil;
 
-    public ComposioOpenApiClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public ComposioOpenApiClientUtilTests(Host host) : base(host)
     {
         _openapiclientutil = Resolve<IComposioOpenApiClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 

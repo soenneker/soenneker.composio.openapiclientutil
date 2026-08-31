@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 namespace Soenneker.Composio.OpenApiClientUtil.Abstract;
 
 /// <summary>
-/// Exposes a cached OpenAPI client instance.
+/// Provides a cached <see cref="ComposioOpenApiClient"/> configured for the Composio API.
 /// </summary>
 public interface IComposioOpenApiClientUtil: IDisposable, IAsyncDisposable
 {
     /// <summary>
-    /// Gets the value.
+    /// Gets the client cached by this utility instance.
     /// </summary>
     /// <param name="cancellationToken">The cancellation token.</param>
-    /// <returns>A task containing the result of the operation.</returns>
+    /// <returns>The configured Composio client.</returns>
     ValueTask<ComposioOpenApiClient> Get(CancellationToken cancellationToken = default);
 }

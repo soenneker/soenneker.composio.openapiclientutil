@@ -44,7 +44,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Composio.OpenApiClient" Version="11.0.178" />
-        <PackageReference Include="Soenneker.Composio.HttpClients" Version="11.0.174" />
+        <PackageReference Include="Soenneker.Composio.OpenApiClient" Version="11.0.180" />
+        <PackageReference Include="Soenneker.Composio.HttpClients" Version="11.0.176" />
     </ItemGroup>
 </Project>
